@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>html, body{ font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }</style>
+    </head>
+    <body>
+        <p><%= message %></p>
+        <p>This window should close very soon...</p>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wingify/across-tabs@1.2.0/dist/across-tabs.min.js"></script>
+        <script>
+            var ChildTab = new AcrossTabs.default.Child({
+                onParentDisconnect: onParentDisconnect,
+                onParentCommunication: onParentCommunication
+            });
+            window.addEventListener('DOMContentLoaded', () => {
+                var tabInfo = ChildTab.getTabInfo();
+                ChildTab.sendMessageToParent({
+                    id: tabInfo.id,
+                    connected: "<%= connected %>" == "true" ? true : false,
+                    data: "<%= data %>",
+                });
+                setTimeout(function(){
+                    window.close();
+                }, 4000);
+            });
+            function onParentDisconnect(){
+                window.close();
+            }
+            function onParentCommunication(message){
+                console.log(message);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+export const STORE_NAME = "custom:store_name";
+export const CURRENCY = "custom:currency";
+export const COMPANY = "custom:company";
+export const COUNTRY = "custom:country";
+export const ID = "sub";
+export const LOCALE = "locale";
+export const WEBSITE = "website";
+export const PHONE_NUMBER = "phone_number";
+export const EMAIL = "email";
+export const FIRST_NAME = "given_name";
+export const LAST_NAME = "family_name";
+export const CUSTOM_PHONE_NUMBER = "custom:phone_number";
+export const STRIPE_CONNECT_ID = "custom:stripe_connect_id";
+export const PAYMENT_RAILS_ID = "custom:payment_rails_id";
+export const FEE_MULTIPLIER = "custom:fee_multiplier";
+export const ACCOUNT_BALANCE = "custom:account_balance";

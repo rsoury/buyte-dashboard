@@ -1,0 +1,63 @@
+service: bmd-sf # Abbreviation for Buyte Merchant Dashboard - Serverless Functions
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: ">=1.28.0 <3.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: ${opt:region, 'ap-southeast-2'}
+  memorySize: 256
+  timeout: 30
+  stage: ${opt:stage, 'dev'}
+  environment:
+    NODE_ENV: ${self:custom.nodeEnv.${opt:stage, self:provider.stage}, 'development'}
+    STRIPE_API_LIVE_SECRET: ${env:SERVER_STRIPE_API_LIVE_SECRET}
+    STRIPE_API_TEST_SECRET: ${env:SERVER_STRIPE_API_TEST_SECRET}
+    PAYMENT_RAILS_ACCESS_KEY: ${env:SERVER_PAYMENT_RAILS_ACCESS_KEY}
+    PAYMENT_RAILS_SECRET_KEY: ${self:PAYMENT_RAILS_SECRET_KEY}
+    DASHBOARD_URL: ${env:SERVER_REACT_APP_PUBLIC_URL}
+    SLACK_WEBHOOK_URL: ${self:SERVER_SLACK_WEBHOOK_URL}
+    SENTRY_DSN: ${env:SERVER_SENTRY_DSN}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        "apigateway:*"
+      Resource: "*"
+    - Effect: "Allow"
+      Action:
+        cognito-idp:*
+      Resource: "*"
+
+package:
+  individually: true
+  exclude:
+    - node_modules/** # Exclude all frontend deps.
+  include:
+    - node_modules/ejs/** # Ejs isn't required in code... so include-deps plugin doesn't pick it up.
+
+plugins:
+  - serverless-plugin-include-dependencies
+  - serverless-dotenv-plugin
+  - serverless-offline
+
+functions:
+  app:
+    handler: ./server/serverless.handler
+    events:
+      - http:
+          path: '/'
+          method: ANY
+          cors: true
+      - http:
+          path: '{proxy+}'
+          method: ANY
+          cors: true
+
+custom:
+  nodeEnv:
+    dev: "development"
+    prod: "production"
+  serverless-offline:
+    port: 9000

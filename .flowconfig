@@ -1,0 +1,16 @@
+[ignore]
+.*/node_modules/*
+.*/build/*
+
+[include]
+
+[libs]
+./src/models/*.js
+
+[lints]
+
+[options]
+module.name_mapper='^@\(tests\/\)\(.*\)$' -> '<PROJECT_ROOT>/tests/\2'
+module.name_mapper='^@\(\/\)\(.*\)$' -> '<PROJECT_ROOT>/src/\2'
+
+[strict]

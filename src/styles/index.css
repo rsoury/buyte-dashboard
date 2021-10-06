@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	padding: 0;
+	/* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif; */
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica",
+		"Arial", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+[evergreen-portal-container],
+[evergreen-portal-container] [data-state] {
+	z-index: 9999999999 !important;
+}
+body .crisp-client #crisp-chatbox a[data-visible] > span:nth-child(2) {
+	-webkit-box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+		0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025) !important;
+	box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+		0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025) !important;
+}
