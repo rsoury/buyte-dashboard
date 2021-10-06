@@ -35,8 +35,8 @@ These instructions will get you a copy of the project built for deployment or lo
    
 ### Local Development
 
-In one tab, start your React App - `yarn start`
-In another tab, start your offline serverless API - `yarn start:connect`
+1. In one tab, start your React App - `yarn start`
+2. In another tab, start your offline serverless API - `yarn start:connect`
 
 ## Contribution
 
