@@ -123,8 +123,7 @@ const DifyForm = ({ user, onSubmit }) => {
 						<Pane fontSize={12} paddingY={10} marginTop={10} opacity="0.5">
 							We take your security very seriously. No sensitive will be stored
 							and/or reused once integration has been complete. If you have any
-							enquiries about our security practices, please contact{" "}
-							<a href="mailto:support@buytecheckout.com">Support</a>
+							enquiries about our security practices, please contact Support
 						</Pane>
 					</>
 				</Form>

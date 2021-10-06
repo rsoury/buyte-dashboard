@@ -25,10 +25,18 @@ import Dashboard from "@/containers/Dashboard";
 const { oauth, ...awsConfig } = AWS_CONFIG;
 awsConfig.oauth = Object.assign({}, oauth, {
 	domain: AUTH_DOMAIN,
+	scope: [
+		"phone",
+		"email",
+		"openid",
+		"profile",
+		"aws.cognito.signin.user.admin"
+	],
 	// Callback URL
 	redirectSignIn: `${PUBLIC_URL}/signin/`,
 	// Sign out URL
-	redirectSignOut: `${PUBLIC_URL}/signout/`
+	redirectSignOut: `${PUBLIC_URL}/signout/`,
+	responseType: "code"
 });
 Amplify.configure(awsConfig);
 

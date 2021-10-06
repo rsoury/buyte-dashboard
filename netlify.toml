@@ -5,5 +5,5 @@
 [context.develop.environment]
     REACT_APP_PUBLIC_URL = "https://develop--dashboard-buyte.netlify.com"
     REACT_APP_FORCE_ENV = "develop-staging"
-    REACT_APP_AUTH_URL = "id-dev.buytecheckout.com"
-    REACT_APP_FUNCTIONS_URL = "https://connect.dev.buytecheckout.com"
+    REACT_APP_AUTH_URL = "buytedev.auth.ap-southeast-2.amazoncognito.com"
+    REACT_APP_FUNCTIONS_URL = "https://xxxxxx.execute-api.ap-southeast-2.amazonaws.com/dev"

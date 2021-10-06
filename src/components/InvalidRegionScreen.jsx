@@ -25,12 +25,6 @@ const InvalidRegionScreen = () => (
 					confident we have the infrastructure to support your region we will
 					notify you by email.
 				</Paragraph>
-				<Paragraph>
-					If you would like to leave us message, use the chat bubble or email{" "}
-					<a href="mailto:support@buytecheckout.com">
-						support@buytecheckout.com
-					</a>
-				</Paragraph>
 			</Pane>
 			<Pane marginBotton={20}>
 				<Image src={SadKoala} width={250} marginY={50} />

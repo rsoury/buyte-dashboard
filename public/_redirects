@@ -1,5 +1,5 @@
 # Redirect default Netlify subdomain to primary domain
-http://dashboard-buyte.netlify.com/* http://dashboard.buytecheckout.com/:splat 301!
+http://dashboard-buyte.netlify.com/* http://dashboard.yourdomain.com/:splat 301!
 
 # All requests to index.html
 /*    /index.html   200
