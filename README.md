@@ -6,7 +6,7 @@ A single-page dashboard application for <a href="https://github.com/rsoury/buyte
 
 ## Demo
 
-[See walkthrough images of Buyte Dashboard](https://github.com/rsoury/buyte-dashboard/blob/master/docs/)
+[See walkthrough images of Buyte Dashboard](https://github.com/rsoury/buyte-dashboard/blob/master/docs/dashboard-walkthrough/)
 
 ## Getting Started
 
@@ -37,6 +37,12 @@ These instructions will get you a copy of the project built for deployment or lo
 
 1. In one tab, start your React App - `yarn start`
 2. In another tab, start your offline serverless API - `yarn start:connect`
+
+### Set up Cognito App Client
+
+It is important to configure your Cognito App Client to allow the correct OAuth Flows, and use the correct Callback URL(s) and Sign out URL(s)
+[Here an image of an example configured App Client](https://github.com/rsoury/buyte-dashboard/blob/master/docs/cognito-app-client.png)
+Please be sure to configure the App Client with the Client ID referenced in your `aws-exports.js` file.
 
 ## Contribution
 
