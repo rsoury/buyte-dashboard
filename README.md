@@ -2,7 +2,7 @@
 
 A single-page dashboard application for <a href="https://github.com/rsoury/buyte">Buyte</a> - digital wallet payment orchestration, built with <a href="https://github.com/facebook/create-react-app">CRA</a>, altered with <a href="https://github.com/harrysolovay/rescripts">Rescripts</a> and powered by GraphQL and Serverless Functions
 
-![Buyte Banner](https://github.com/rsoury/buyte-dashboard/blob/master/docs/1.%20Your%20Digital%20Wallet%20Checkouts%20in%20one%20place.png)
+![Buyte Banner](https://github.com/rsoury/buyte-dashboard/blob/master/docs/dashboard-walkthrough/1.%20Your%20Digital%20Wallet%20Checkouts%20in%20one%20place.png)
 
 ## Demo
 
