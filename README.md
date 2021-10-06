@@ -40,9 +40,9 @@ These instructions will get you a copy of the project built for deployment or lo
 
 ### Set up Cognito App Client
 
-It is important to configure your Cognito App Client to allow the correct OAuth Flows, and use the correct Callback URL(s) and Sign out URL(s)
-[Here an image of an example configured App Client](https://github.com/rsoury/buyte-dashboard/blob/master/docs/cognito-app-client.png)
-Please be sure to configure the App Client with the Client ID referenced in your `aws-exports.js` file.
+It is important to configure your Cognito App Client to allow the correct OAuth Flows, and use the correct Callback URL(s) and Sign out URL(s).  
+[Here an image of an example configured App Client](https://github.com/rsoury/buyte-dashboard/blob/master/docs/cognito-app-client.png).  
+Please be sure to configure the App Client with the Client ID referenced in your `aws-exports.js` file.  
 
 ## Contribution
 
