@@ -1,35 +1,22 @@
-<div align="center">
-  <h1>Buyte Dashboard</h1>
-</div>
+# Buyte Dashboard
 
-<div align="center">
-  <strong>A single-page dashboard application for <a href="https://github.com/rsoury/buyte">Buyte</a> - digital wallet payment orchestration, built with <a href="https://github.com/facebook/create-react-app">CRA</a>, altered with <a href="https://github.com/harrysolovay/rescripts">Rescripts</a> and powered by GraphQL and Serverless Functions</strong>
-</div>
-
-<br/>
+A single-page dashboard application for <a href="https://github.com/rsoury/buyte">Buyte</a> - digital wallet payment orchestration, built with <a href="https://github.com/facebook/create-react-app">CRA</a>, altered with <a href="https://github.com/harrysolovay/rescripts">Rescripts</a> and powered by GraphQL and Serverless Functions
 
 ![Buyte Banner](https://github.com/rsoury/buyte-dashboard/blob/master/docs/1.%20Your%20Digital%20Wallet%20Checkouts%20in%20one%20place.png)
 
-<div align="center">
-   <a href="https://github.com/rsoury/buyte-dashboard/blob/master/docs/">Walkthrough Images</a>
-</div>
+## Demo
 
-## Table of Contents
+[See walkthrough images of Buyte Dashboard](https://github.com/rsoury/buyte-dashboard/blob/master/docs/)
 
-- [Table of Contents](#table-of-contents)
-- [Installation Requirements](#installation-requirements)
-- [Getting Started](#getting-started)
-- [Deployment](#deployment)
-- [Local Development](#local-development)
-- [Contribution](#contribution)
-- [Enterprise Support](#enterprise-support)
-- [Found this repo interesting?](#found-this-repo-interesting)
+## Getting Started
 
-## Installation Requirements
+These instructions will get you a copy of the project built for deployment or local development.
+
+### Prerequisites
 
 - Node.js 10.0+
 
-## Getting Started
+### Set up
 
 1. Clone the repository `git clone git@github.com:rsoury/buyte-dashboard.git`
 2. Install Node.js Dependencies: `yarn`
@@ -37,7 +24,7 @@
 4. Copy `.env.example` to `.env`, `.env.development` or `.env.production` and configure you environment settings.
 5. `yarn build`
 
-## Deployment
+### Deployment
 
 1. Deploy your React App.
    [Netlify](https://netlify.com/) is a great service for hosting static websites
@@ -46,7 +33,7 @@
    sls deploy --stage prod --env production --region ap-southeast-2
    ```
    
-## Local Development
+### Local Development
 
 In one tab, start your React App - `yarn start`
 In another tab, start your offline serverless API - `yarn start:connect`
