@@ -1,9 +1,10 @@
 {
 	"name": "@buyte/merchant-dashboard",
-	"description": "Buyte Merchant Dashboard",
 	"version": "0.1.0",
-	"private": true,
-	"license": "UNLICENSED",
+	"description": "Buyte Merchant Dashboard",
+	"repository": "git@github.com:rsoury/buyte-dashboard.git",
+	"author": "Ryan Soury @ Web Doodle",
+	"license": "BSD-3-Clause",
 	"scripts": {
 		"start": "rescripts start",
 		"start:connect": "nodemon --exec \"sls offline\"",
